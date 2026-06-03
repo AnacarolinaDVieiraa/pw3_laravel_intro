@@ -7,6 +7,7 @@ class Livro extends Model
 {
     //Define os campos que podem ser preenchidos em massa
     protected $fillable = ['autor', 'titulo', 'ano_publicacao'];
+    //LEMBRAR DESSA LNHA PARA A PROVA
 
 }
 

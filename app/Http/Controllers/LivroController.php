@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Livro;
+use App\Models\Livro; //LEMBRAR DESSE CAMINHO PARA A PROVA
 use Illuminate\Http\Request;
 
 class LivroController extends Controller
