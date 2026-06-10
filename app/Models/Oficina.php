@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Oficina extends Model
 {
     //
-        protected $fillable = ['nome_oficina', 'professor_responsavel', 'carga_horaria', 'turno'];
+     //LEMBRAR
+       protected $fillable = ['nome_oficina', 'professor_responsavel', 'carga_horaria', 'turno'];
 }
