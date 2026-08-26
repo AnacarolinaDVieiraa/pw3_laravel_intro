@@ -7,9 +7,10 @@ use App\Http\Controllers\LivroController;
 use App\Http\Controllers\OficinaController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 //LEMBRAR
+Route::view('/landing' , 'landing');
 Route::get('/produtos', [ProdutoController::class, 'index']);
 Route::post('/produtos', [ProdutoController::class, 'store']);
 Route::get('/livros', [LivroController::class, 'index']);
