@@ -1,5 +1,5 @@
 <?php
-
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 //LEMBRAR
 use App\Http\Controllers\ProdutoController;
@@ -13,6 +13,20 @@ Route::get('/', function () {
 //LEMBRAR
 Route::view('/landing' , 'landing');
 Route::view('/admin', 'admin.dashboard');
+
+Route::get('/teste-orm', function () {
+        User::insert([
+            'name' => 'Ana Clara Santos',
+            'email' => 'ana.santos@escola.sp.gov.br',
+            'password' => '12345678'
+        ]);
+    
+
+    return User::all();
+});
+
+
+
 Route::get('/produtos', [ProdutoController::class, 'index']);
 Route::post('/produtos', [ProdutoController::class, 'store']);
 Route::get('/livros', [LivroController::class, 'index']);
