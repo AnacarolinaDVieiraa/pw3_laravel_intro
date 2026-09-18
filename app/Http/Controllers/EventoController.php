@@ -30,7 +30,7 @@ class EventoController extends Controller
     }
 
 
-     public function save (Request $request)
+     public function store (Request $request)
     {
         $dadosValidos = $request -> validate([
             'titulo' => 'required|min:3|max:255',
