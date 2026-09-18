@@ -14,7 +14,7 @@ class EventoController extends Controller
         if ($busca){
             //lembrar de mudar o nome de onde esta Evento, para o nome do arquivo
             //que esta na pasta models
-            $usuarios = Evento::where('titulo', 'like', "%{$busca}%", 'and')
+            $eventos = Evento::where('titulo', 'like', "%{$busca}%", 'and')
             ->orderBy('titulo', 'ASC')
             ->get();
         } else{
