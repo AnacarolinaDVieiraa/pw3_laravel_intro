@@ -40,6 +40,8 @@ class UserController extends Controller
             'password' => 'required|min:6',
         ]);
 
+        
+
         // Persistência no banco usando o ORM Eloquent
         User::create($dadosValidos);
         // Redireciona para o painel administrativo com mensagem de sucesso

@@ -6,6 +6,7 @@ use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\LivroController;
 use App\Http\Controllers\OficinaController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\EventoController;
 
 Route::get('/', function () {
     return view('home');
@@ -17,6 +18,13 @@ Route::get('/admin', [UserController::class, 'index']);
 // Rota para carregar o formulario (GET)
 Route::get('/usuarios/novo', [UserController::class, 'create']);
 // Rota para salvar os dados enviados (POST)
+
+Route::get('/eventos', [EventoController::class, 'index']);
+
+Route::get('/eventos/novo', [EventoController::class, 'create']);
+
+Route::post('/eventos', [EventoController::class, 'save']);
+
 Route::post('usuarios', [UserController::class, 'store']);
 Route::get('/produtos', [ProdutoController::class, 'index']);
 Route::post('/produtos', [ProdutoController::class, 'store']);
