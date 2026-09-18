@@ -23,7 +23,7 @@ Route::get('/eventos', [EventoController::class, 'index']);
 
 Route::get('/eventos/novo', [EventoController::class, 'create']);
 
-Route::post('/eventos', [EventoController::class, 'save']);
+Route::post('/eventos', [EventoController::class, 'store']);
 
 Route::post('usuarios', [UserController::class, 'store']);
 Route::get('/produtos', [ProdutoController::class, 'index']);
